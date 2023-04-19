@@ -1,0 +1,28 @@
+---
+import VueCounter from "../components/VueCounter.vue";
+export async function getStaticPaths() {
+  return [
+    {
+      // ! the route will be here
+      params: { random: "here" },
+      props: {
+        title: "The ultimate Astro handbook",
+        text: "If you want to learn Astro, you must read this book.",
+      },
+    },
+  ];
+}
+
+const { title , text } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{title}</title>
+  </head>
+  <body>
+    <h1>{title}</h1>
+    <p>{text}</p>
+    <VueCounter client:only />
+  </body>
+</html>

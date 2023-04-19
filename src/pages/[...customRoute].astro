@@ -2,17 +2,18 @@
 export async function getStaticPaths() {
   const pages = [
     {
+      // NOTE this overrides the default `index.astro` page
       slug: undefined,
       title: "Astro Store",
       text: "Welcome to the Astro store!",
     },
     {
-      slug: "products",
-      title: "Astro products",
-      text: "We have lots of products for you",
+      slug: "notebooks",
+      title: "Astro notebooks",
+      text: "We have lots of notebooks for you",
     },
     {
-      slug: "products/astro-handbook",
+      slug: "notebooks/2/astro-handbook",
       title: "The ultimate Astro handbook",
       text: "If you want to learn Astro, you must read this book.",
     },
